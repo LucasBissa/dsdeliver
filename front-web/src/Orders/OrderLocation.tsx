@@ -5,8 +5,8 @@ import { fetchLocalMapBox } from '../api';
 import { OrderLocationData } from './types';
 
 const initialPosition = {
-    lat: 19.9224408,
-    lng:-44.0595882
+    lat: -19.9374038,
+    lng: -44.0533968
 }
 
 type Place = {
@@ -71,7 +71,7 @@ function OrderLocation({ onChangeLocation }: Props) {
                     center={address.position}
                     zoom={13}
                     key={address.position.lat}
-                    scrollWheelZoom={true} >
+                    scrollWheelZoom={false} >
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
